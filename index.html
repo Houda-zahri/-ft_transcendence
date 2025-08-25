@@ -1,0 +1,110 @@
+<!-- <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Dark mode */
+.markmap-dark {
+  background: #18181b; /* darker background */
+  color: #f5f5f5;      /* light text */
+}
+
+.markmap-dark svg {
+  background: #18181b;
+}
+
+.markmap-dark text {
+  fill: #f5f5f5 !important; /* make node labels white */
+}
+
+.markmap-dark path {
+  stroke: #9ca3af !important; /* make connecting lines light gray */
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script>
+<script>
+(() => {
+  setTimeout(() => {
+    const { markmap: S, mm: Q } = window;
+    const $ = new S.Toolbar;
+    $.attach(Q);
+    const I = $.render();
+    I.setAttribute("style","position:absolute;bottom:20px;right:20px");
+    document.body.append(I);
+  })
+})();
+</script>
+<script>
+((l,U,M,R) => {
+  const N = l();
+  window.mm = N.Markmap.create("svg#mindmap", (U||N.deriveOptions)(R), M);
+
+  // Always force dark mode
+  document.documentElement.classList.add("markmap-dark");
+})(() => window.markmap, null, {
+  "content": "🌟 Dark Mode Test",
+  "children": [
+    {"content": "This is white text on dark background"}
+  ]
+}, null);
+</script>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:S,mm:Q}=window,$=new S.Toolbar;$.attach(Q);const I=$.render();I.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(I)})})()</script><script>((l,U,M,R)=>{const N=l();window.mm=N.Markmap.create("svg#mindmap",(U||N.deriveOptions)(R),M),window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.classList.add("markmap-dark")})(()=>window.markmap,null,{"content":"","children":[{"content":"&#x1f3af; ft_transcendence Roadmap (UI-First &#x2192; Backend)","children":[{"content":"<strong>Phase 1 &#x2013; Shared Foundation (UI + Project Setup)</strong>","children":[{"content":"\n<p data-lines=\"7,8\"><strong>All Team</strong></p>","children":[{"content":"Setup repo (<code>frontend/</code>, <code>services/</code>, <code>docs/</code>).","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"Install <strong>Next.js + Tailwind + TS</strong>.","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Create <strong>shared UI kit</strong> (Button, Input, Navbar, Card, Modal, Avatar).","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"Basic routing: <code>/login</code>, <code>/register</code>, <code>/profile</code>, <code>/game</code>, <code>/chat</code>, <code>/stats</code>.","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"No backend yet &#x2192; just <strong>static mock pages</strong> with fake data.","children":[],"payload":{"tag":"li","lines":"13,15"}}],"payload":{"tag":"li","lines":"7,15"}}],"payload":{"tag":"h2","lines":"5,6"}},{"content":"<strong>Phase 2 &#x2013; Page UI per Module</strong>","children":[{"content":"<strong>Souhaila</strong> &#x2192; User Management UI (Register, Login, Profile, Settings + GDPR buttons).","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"<strong>Asmae</strong> &#x2192; OAuth Login UI (Login with Google/GitHub button, 2FA setup flow).","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"<strong>Houda</strong> &#x2192; Game UI (Pong canvas, multiplayer lobby, customization screen).","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"<strong>Maryem</strong> &#x2192; Chat UI (DM list, chat box, invite to game button).","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"<strong>Chaimae</strong> &#x2192; Stats Dashboard UI (charts, match history list, AI opponent selection).","children":[],"payload":{"tag":"li","lines":"25,27"}}],"payload":{"tag":"h2","lines":"19,20"}},{"content":"<strong>Phase 3 &#x2013; Backend Core Setup</strong>","children":[{"content":"\n<p data-lines=\"33,34\"><strong>Team</strong></p>","children":[{"content":"Setup <strong>Fastify Gateway</strong> + Microservices skeleton (Auth, User, Game, Chat, Stats).","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Add SQLite database &amp; Prisma/Knex as ORM.","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"Write <code>openapi.yaml</code> (API contract).","children":[],"payload":{"tag":"li","lines":"37,38"}},{"content":"Integrate Swagger UI at <code>/docs</code>.","children":[],"payload":{"tag":"li","lines":"38,40"}}],"payload":{"tag":"li","lines":"33,40"}}],"payload":{"tag":"h2","lines":"31,32"}},{"content":"<strong>Phase 4 &#x2013; Backend Features per Module</strong>","children":[{"content":"<strong>Souhaila</strong> &#x2192; User Service (CRUD, friends, GDPR export/delete).","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"<strong>Asmae</strong> &#x2192; Auth Service (OAuth, JWT, 2FA).","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"<strong>Houda</strong> &#x2192; Game Service (remote play, multiplayer, customization).","children":[],"payload":{"tag":"li","lines":"48,49"}},{"content":"<strong>Maryem</strong> &#x2192; Chat Service (DM, block, invites, notifications).","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"<strong>Chaimae</strong> &#x2192; Stats Service (dashboard, history, AI opponent logic).","children":[],"payload":{"tag":"li","lines":"50,52"}}],"payload":{"tag":"h2","lines":"44,45"}},{"content":"<strong>Phase 5 &#x2013; Connect UI to Backend</strong>","children":[{"content":"Replace all mock data with <strong>real API calls</strong> (Axios/Fetch).","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"Test flows end-to-end (Login &#x2192; Profile &#x2192; Play Game &#x2192; Chat &#x2192; Stats).","children":[],"payload":{"tag":"li","lines":"59,61"}}],"payload":{"tag":"h2","lines":"56,57"}},{"content":"<strong>Phase 6 &#x2013; Security &amp; Accessibility</strong>","children":[{"content":"<strong>Asmae</strong> &#x2192; WAF + Vault for secrets.","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"<strong>Team</strong> &#x2192; Accessibility (all devices, extra browsers).","children":[],"payload":{"tag":"li","lines":"68,70"}}],"payload":{"tag":"h2","lines":"65,66"}}],"payload":{"tag":"h1","lines":"3,4"}},{"content":"&#x1f3c1; Final Phase &#x2013; Polish &amp; Deploy","children":[{"content":"CI/CD, Docker build, stress test, doc updates.","children":[],"payload":{"tag":"li","lines":"76,77"}},{"content":"Final UI polishing via shared UI kit.","children":[],"payload":{"tag":"li","lines":"77,80"}}],"payload":{"tag":"h1","lines":"74,75"}}]},null)</script>
+</body>
+</html>
